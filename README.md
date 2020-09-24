@@ -17,7 +17,7 @@ Dri-Sump Containment Tightness Testing Brainstorm
      ---timestamped photo taken of each test/result/use, sent off to technicians laptop & remote server
      ---usage counter & statistics 
      ---network connectivity, site wifi, ethernet, bluetooth serial/PAN,4Glte connectivity?
-     ---phone app?
+     ---phone app? --web interface
      ---cybersecurity?
      ---are electronics going to be exposed to vacuum?
      ---protective sealed case for dust and wear and tear
