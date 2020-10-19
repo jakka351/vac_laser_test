@@ -12,15 +12,12 @@ Dri-Sump Containment Tightness Testing Brainstorm
 
 
      retrofit rpi to 'digitise' device.
-     ---control of laser via gpio + relay--?
-     ---gps lat/long logged
-     ---timestamped photo taken of each test/result/use, sent off to technicians laptop & remote server
+     ---control relays via GPIO receiving commands via bluetooth serial connection
+     ---gps lat/long logged??
      ---usage counter & statistics 
-     ---network connectivity, site wifi, ethernet, bluetooth serial/PAN,4Glte connectivity?
-     ---phone app? --web interface
-     ---cybersecurity?
-     ---are electronics going to be exposed to vacuum?
-     ---protective sealed case for dust and wear and tear
+     ---disable onboard wifi/hidden wifi hotspot for maintenance or troubleshooting?
+     ---manual switches in case of technical error?
+
      
      
 
