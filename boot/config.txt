@@ -1,0 +1,41 @@
+# For more options and information see
+# http://rpf.io/configtxt
+# Some settings may impact device functionality. See link above for details
+
+##onboard wifi must be disabled as bluetooth serial is going to be used
+##hidden wifi hotspot for maintenance
+#dtoverlay=disable-wifi
+
+dtoverlay=vc4-fkms-v3d
+max_framebuffers=2
+
+# set cpu freq min/max + turbo at boot
+force_turbo=0
+initial_turbo=60
+arm_freq=1400
+arm_freq_min=800
+#gpu_freq=750
+#gpu_freq_min=400
+
+# GPU memory allocation/dynamic
+gpu_mem=64
+#cma_lwm=128
+#cma_hwm=344
+
+# Force HDMI output / enables desktop for pi4 vnc
+hdmi_force_hotplug=1
+
+# Uncomment some or all of these to enable the optional hardware interfaces
+dtparam=i2c_arm=off
+dtparam=i2s=off
+dtparam=spi=off
+dtparam=audio=off
+
+# Serial Comms
+enable_uart=1
+
+#uBlox neo7 pps pin
+#dtoverlay=pps-gpio,gpiopin=
+
+#GPIO22 LED paired to act-led
+#dtoverlay=act-led,gpio=22,activelow=on
