@@ -13,22 +13,36 @@ Dri-Sump Containment Tightness Testing Brainstorm
                 
 22/10/2020 - rpi to have own gps unit,  can use ublox modules same as tardis, gpsd 
 
-22/10/2020 - Javascript/NODEJS for language
+22/10/2020 - Javascript/NODEJS for language?
 
-22/10/2020 - Redundancy in case of bluetooth booboo
-           - bt connection dies,rpi turns on wifi hotspot that tech can connect to and troubleshoot?
-           - read only file system to help avoid sd card /boot from usb
+22/10/2020 - Redundancy in case of bluetoothache
+
+           - **bt connection dies,rpi turns on wifi hotspot that tech can connect to and troubleshoot? **
+           
+           - **rpi could host local web page with control signals sent over that in event of bluetooth failure **
+           
+           - remote testing with no network coverage this could also act as a mechanism to verify machine usage
+           
+           - **read only file system to help avoid sd card **/boot from usb
+           
            - manual switches/screen gui - voids the point of having the rpi at all
            
 22/10/2020 - Bluetooth Serial out
            - if rpi is on same network as phone-app there is no need for bluetooth?
-           - PAN bluetooth profile, can this give network access to pi,send commands, is it practical
+           
+           - **PAN bluetooth profile, can this give network access to pi,send commands, is it practical**
+           
            - where is the pi mounted, can ethernet/usb be considered
+           
            - does the rpi need its own internet connection - connect to app via cloud
+           
 
 22/10/2020 - Web Application Details
+
            - Ionic Framework - lightweight front-end (static HTML, CSS and light Javascript – with no CMS) 
+           
            - Offline mode 
+           
            "Using AWS AppSync in conjunction with datastore, technicians and engineers will have the
 ability to work offline enabling the application to work in remote areas where internet access is
 limited. The data they collect will be stored locally and then once an internet connection is
@@ -39,7 +53,7 @@ established then all the work the engineer conducted offline would go unrecorded
 
 
 
-
+~sept 2020
 
      retrofit rpi to 'digitise' device.
      ---control relays via GPIO receiving commands via bluetooth serial connection
