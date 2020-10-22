@@ -17,14 +17,10 @@ Dri-Sump Containment Tightness Testing Brainstorm
 
 22/10/2020 - Redundancy in case of bluetoothache
 
-           - **bt connection dies,rpi turns on wifi hotspot that tech can connect to and troubleshoot? **
-           
-           - **rpi could host local web page with control signals sent over that in event of bluetooth failure **
-           
+           - bt connection dies,rpi turns on wifi hotspot that tech can connect to and troubleshoot? 
+           - rpi could host local web page with control signals sent over that in event of bluetooth failure 
            - remote testing with no network coverage this could also act as a mechanism to verify machine usage
-           
-           - **read only file system to help avoid sd card **/boot from usb
-           
+           - read only file system to help avoid sd card **/boot from usb
            - manual switches/screen gui - voids the point of having the rpi at all
            
 22/10/2020 - Bluetooth Serial out
