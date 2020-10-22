@@ -9,6 +9,36 @@ Dri-Sump Containment Tightness Testing Brainstorm
                 Negative Pressure Vacuum Test
                 -view chamber results -> see laser dot = pass
                 -----------------------> see laser line = fail
+               
+                
+22/10/2020 - rpi to have own gps unit,  can use ublox modules same as tardis, gpsd 
+
+22/10/2020 - Javascript/NODEJS for language
+
+22/10/2020 - Redundancy in case of bluetooth booboo
+           - bt connection dies,rpi turns on wifi hotspot that tech can connect to and troubleshoot?
+           - read only file system to help avoid sd card /boot from usb
+           - manual switches/screen gui - voids the point of having the rpi at all
+           
+22/10/2020 - Bluetooth Serial out
+           - if rpi is on same network as phone-app there is no need for bluetooth?
+           - PAN bluetooth profile, can this give network access to pi,send commands, is it practical
+           - where is the pi mounted, can ethernet/usb be considered
+           - does the rpi need its own internet connection - connect to app via cloud
+
+22/10/2020 - Web Application Details
+           - Ionic Framework - lightweight front-end (static HTML, CSS and light Javascript – with no CMS) 
+           - Offline mode 
+           "Using AWS AppSync in conjunction with datastore, technicians and engineers will have the
+ability to work offline enabling the application to work in remote areas where internet access is
+limited. The data they collect will be stored locally and then once an internet connection is
+established, the data will sync to the cloud. In addition, AWS SNS will send a push notification
+to the user's device to signify if the data was uploaded successfully when an internet
+connection is established. (Downsides: If it does not upload correctly once a connection is
+established then all the work the engineer conducted offline would go unrecorded)"
+
+
+
 
 
      retrofit rpi to 'digitise' device.
