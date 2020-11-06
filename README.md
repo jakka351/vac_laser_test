@@ -1,32 +1,41 @@
-# vac_laser_test
+[b]# vac_laser_test[/b]
 
 ![alt text](https://github.com/jakka351/vac_laser_test/blob/master/_updatebluetoothrasp.png?raw=true)
 
 
-issue commands via bluetooth options
+[b]issue commands via bluetooth options[/b]
 
-->ssh over bluetooth
-
---btserial.sh file
-
-
-->ble gatt server
-
--->https://learn.adafruit.com/introduction-to-bluetooth-low-energy/gatt
-
--->https://github.com/jakka351/raspberrypi-ble-server
-
--->https://gist.github.com/stonehippo/d56d626927d0d4d137428341ac95b87b
-
--->https://www.slideshare.net/yeokm1/introduction-to-bluetooth-low-energy
+[b]ssh over bluetooth[/b]
+--to be tested 7/11/2020
+--sshoverbluetooth.sh script
+--issue commands to pi via shell script, eg 'raspi-gpio set 4 op dh'
+--serial port profile is used
 
 
-->bluetooth serial port profile
+[b]bluetooth low energy server[/b]
+
+-->https://github.com/jakka351/boxee gpio control over ble example
+
+Creates a Bluetooth LE advertisement and publishes one service,which enables to set GPIO 17 and 18 to HIGH and LOW on a Raspberry PI, by writing a 2 byte value array:
+
+    0x00 0x00 => PIN 17 and 18 is LOW
+    0x00 0xFF => PIN 17 is LOW, PIN 18 is HIGH
+    0xFF 0xFF => PIN 17 and 18 are HIGH
+
+Boxee is a Bluetooth Low Energy automation protoype for the Raspberyy PI. It relies on Dbus and Bluez to expose GPIO control over the BLE, so that one can control GPIOs over the phone. The testing application on IOS is LightBlue
+
+
+-->https://learn.adafruit.com/introduction-to-bluetooth-low-energy/gatt ble intro
+
+-->https://github.com/jakka351/raspberrypi-ble-server another example
+
+-->https://gist.github.com/stonehippo/d56d626927d0d4d137428341ac95b87b another example
+
+-->https://www.slideshare.net/yeokm1/introduction-to-bluetooth-low-energy background info
 
 
 
-
-edit at will
+edit me
 jack contact details +61434645485 bjakkaleighton@gmail.com 
 
 Dri-Sump Containment Tightness Testing Brainstorm
