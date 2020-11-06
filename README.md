@@ -1,7 +1,23 @@
 # vac_laser_test
 
-edit at will
+![alt text](https://github.com/jakka351/vac_laser_test/blob/master/_updatebluetoothrasp.png?raw=true)
 
+
+issue commands via bluetooth options
+->ssh over bluetooth
+--btserial.sh file
+
+->ble gatt server
+-->https://learn.adafruit.com/introduction-to-bluetooth-low-energy/gatt
+-->https://github.com/jakka351/raspberrypi-ble-server
+-->https://gist.github.com/stonehippo/d56d626927d0d4d137428341ac95b87b
+-->https://www.slideshare.net/yeokm1/introduction-to-bluetooth-low-energy
+
+->bluetooth serial port profile
+
+
+
+edit at will
 jack contact details +61434645485 bjakkaleighton@gmail.com 
 
 Dri-Sump Containment Tightness Testing Brainstorm
