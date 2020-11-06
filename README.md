@@ -2,23 +2,29 @@
 
 ![alt text](https://github.com/jakka351/vac_laser_test/blob/master/_updatebluetoothrasp.png?raw=true)
 
-
-**issue commands via bluetooth options**
-
-**ssh over bluetooth**
-*To be tested 7/11/2020
--sshoverbluetooth.sh script
--issue commands to pi via shell script, eg 'raspi-gpio set 4 op dh'
--serial port profile is used
-
-
-**bluetooth low energy server**
+ This will create a bullet point list in your markdown
  Markup : * Bullet list
               * Nested bullet
                   * Sub-nested bullet etc
           * Bullet list item 2
 
-    Markup: *https://github.com/jakka351/boxee gpio control over ble example
+**issue commands via bluetooth options**
+
+
+**ssh over bluetooth**
+
+  *To be tested 7/11/2020
+  
+  -sshoverbluetooth.sh script
+  
+  -issue commands to pi via shell script, eg 'raspi-gpio set 4 op dh'
+
+  -serial port profile is used
+
+
+**bluetooth low energy server**
+
+https://github.com/jakka351/boxee gpio control over ble example
 
 >Creates a Bluetooth LE advertisement and publishes one service,which enables to set GPIO 17 and 18 to HIGH and LOW on a Raspberry PI, by writing a 2 byte value array:
 
@@ -88,22 +94,29 @@ Offline mode
     -raspberry pi camera (does it need to be infrared as will be inside case?)
     -relay
     
-**Potential Software
-    *gpsd gps socket on debian
-    (sudo apt install gpsd gpsd-clients python-gps)
+**Potential Software**
+    +gpsd gps socket on debian
+    
     -raspistill/raspivid
     -python for gpio control
     -rpicam-web-interface for easy testing of cam 
     
-***stuff that jack has available currently to play with**
-    *2x rpi4, 1x rpi3b, 1x rpi3a+
-    -1x arduino uno, 1x arduino leonardo
-    -1x Ublox7 gps unit, with both serial and usb connection
-    -1x 4 channel relay 5v
-    -1x picamera
-    -breadboard + gpio breakout
-    -1x usb wifi dongle, 2x bluetooth usb
-    -various sensors and bits
+**stuff that jack has available currently to play with**
+    *
+    
+    -2x rpi4, 1x rpi3b, 1x rpi3a+  
+     -1x arduino uno, 1x arduino leonardo
+     -1x Ublox7 gps unit, with both serial and usb connection
+     -1x 4 channel relay 5v
+ 
+ -1x picamera
+ 
+ -breadboard + gpio breakout
+ 
+ -1x usb wifi dongle, 2x bluetooth usb
+ 
+ -various sensors and bits
 
  **tooling**
+ 
     -soldering equipment
