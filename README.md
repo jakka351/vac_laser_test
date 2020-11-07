@@ -1,11 +1,10 @@
 # vac_laser_test
 
-![alt text](https://github.com/jakka351/vac_laser_test/blob/master/_updatebluetoothrasp.png?raw=true)Mock up drawing of RPI3
+![alt text](https://github.com/jakka351/vac_laser_test/blob/master/_updatebluetoothrasp.png?raw=true)Digital Prototype
 
 **ssh over bluetooth**
   
-    issue commands to pi via shell script, eg 'raspi-gpio set 4 op dh'
-
+    issue commands to pi via shell script over bluetooth connection, eg 'raspi-gpio set 4 op dh'
     serial port profile is used
 
 
@@ -21,12 +20,17 @@ https://github.com/jakka351/boxee gpio control over ble example
 >Boxee is a Bluetooth Low Energy automation protoype for the Raspberyy PI. It relies on Dbus and Bluez to expose GPIO control over the BLE, so that one can >control GPIOs over the phone. The testing application on IOS is LightBlue
 
    https://github.com/thingsplode/blexee example of a phone application for IOS based on cordova
+   
    https://learn.adafruit.com/introduction-to-bluetooth-low-energy/gatt ble intro
+   
    https://github.com/jakka351/raspberrypi-ble-server another example
+   
    https://gist.github.com/stonehippo/d56d626927d0d4d137428341ac95b87b another example
+   
    https://www.slideshare.net/yeokm1/introduction-to-bluetooth-low-energy background info
+   
 
-![alt text](https://github.com/jakka351/vac_laser_test/blob/bluetooth/images/20201105_093431.jpg?raw=true)Sample
+![alt text](https://github.com/jakka351/vac_laser_test/blob/bluetooth/images/20201105_093431.jpg?raw=true)Test rig
 
 jack contact details +61434645485 bjakkaleighton@gmail.com 
 
@@ -37,7 +41,7 @@ jack contact details +61434645485 bjakkaleighton@gmail.com
                 -----------------------> see laser line = fail
                
                 
-**22/10/2020 - rpi to have own gps unit,  can use ublox modules same as tardis, gpsd **
+**22/10/2020 - rpi to have own gps unit**
    
    **read only file system to help avoid sd card corruption **           
 
