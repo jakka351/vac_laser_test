@@ -5,7 +5,7 @@
 # vaclasertest 08112020  install_full.sh
 #this script will install vac_laser_test to a fresh copy of raspbian lite 
 #
-#sudo su - <<EOF
+sudo su - <<EOF
 #
 #rasp-config setup
 echo "'
