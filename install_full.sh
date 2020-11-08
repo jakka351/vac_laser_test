@@ -5,36 +5,39 @@
 # vaclasertest 08112020  install_full.sh
 #this script will install vac_laser_test to a fresh copy of raspbian lite 
 #
-sudo su - <<EOF
+#sudo su - <<EOF
 #
-#raspi-config setup
-print "
+#rasp-config setup
+echo "'
 https://github.com/jakka351/vac_laser_test
 Dri-Sump Containment Testing 
 Leighton OBrien pty ltd
-vaclasertest 08112020 "
-print "install script for vaclasertest, drisump containment testing."
-print "raspberry pi initial config."
-print "enabling secure shell access..."
-sudo raspi-config nonint do_ssh 1
-print "enabling serial comms..."
-sudo raspi-config nonint get_serial
-print "enabling serial login..."
-sudo raspi-config nonint get_serial_hw
+vaclasertest 08112020 
+"
+echo "install script for vaclasertest, drisump containment testing."
+echo "raspberry pi initial config."
+echo "enabling secure shell access..."
+#sudo raspi-config nonint do_ssh 1
+
+echo "enabling serial comms..."
+echo "enabling serial login..."
 sudo raspi-config nonint do_serial 1
-print "enabling remote gpio access..."
-sudo raspi-config nonint get_rgpio
+
+echo "enabling remote gpio access..."
+#sudo raspi-config nonint get_rgpio
 sudo raspi-config nonint do_rgpio 1
-print "setting gpu_mem..."
+
+echo "setting gpu_mem..."
 sudo raspi-config nonint do_memory_split 16
-print "enabling readonly filesystem..."
-sudo raspi-config nonint enable_overlayfs
+
+echo "enabling readonly filesystem..."
+#sudo raspi-config nonint enable_overlayfs
 #
-print "setting hostname to vaclasertest..."
+echo "setting hostname to vaclasertest..."
 #set hostname
 sudo hostnamectl set-hostname "vaclasertest"
 #
-print "creating a message of the day..."
+echo "creating a message of the day..."
 #set message of the day
 echo '
 Dri-Sump Containment testing on GNU/Linux. 
@@ -88,27 +91,27 @@ dtparam=audio=off
 dtparam=watchdog=off
 ' | sudo tee /boot/config.txt > /dev/null
 #
-print "setting config.txt params..."
+echo "setting config.txt params..."
 #
 echo '
 console=tty1 root=/dev/mmcblk0p2 rootfstype=ext4 elevator=deadline fsck.repair=yes rootwait ip=192.168.4.1 smsc95xx.macaddr=B8:AA:BC:DE:F0:12
 ' | sudo tee /boot/cmdline.txt > /dev/null
 #
-print "setting cmdline.txt params..."
-print "updating with apt..."
+echo "setting cmdline.txt params..."
+echo "updating with apt..."
 #update & upgrade raspberry
 sudo apt update -y && sudo apt dist-upgrade -y
 sudo apt install -y python python3 python-pip python3-pip &
 sudo apt install -y git curl wget gcc g++ make build essential &
 #
 #########bluetooth bluez setup
-print "installing bluetooth..."
+echo "installing bluetooth..."
 #
 sudo apt install -y wiringpi bluez bluetooth blueman &
 sudo apt install -y bluez-firmware python-lightblue python-bluez python3-bluez  &
 sudo apt install -y bluez-test-tools bluez-hcidump bluez-test-scripts bluez-test-scripts bluez-tools &
 #
-print 'configuring bluetooth services...'
+echo 'configuring bluetooth services...'
 #sudo systemctl enable bluetooth.d
 #sudo systemctl enable bluetooth.service
 #sudo systemctl enable bluetooth.target
@@ -159,7 +162,7 @@ sudo systemctl restart rfcomm
 ' | sudo tee /home/pi/sshbluetooth.sh > /dev/null
 #
 #
-print "created bluetooth service..."
+echo "created bluetooth service..."
 #
 #
 sudo chmod 755 /home/pi/sshbluetooth.sh
@@ -170,10 +173,10 @@ echo '
 ' | sudo tee -a /etc/rc.local > /dev/null 
 # 
 #
-print "ssh bluetooth script ready... "
+echo "ssh bluetooth script ready... "
 ###########bluetooth low energy server //gatt
 #this one requires nodejs
-print "preparing bluetooth low energy..."
+echo "preparing bluetooth low energy..."
 #systemctl stop bluetooth &&
 #hciconfig &&
 #sudo apt install -y nodejs build-essential python-dev python-rpi.gpio nodejs libudev-dev libusb-1.0-0.dev libcap2-bin &
@@ -183,11 +186,11 @@ print "preparing bluetooth low energy..."
 #npm start&
 ############gpsd install & setup web app###########
 #
-pint "installing gps software..."
+echo "installing gps software..."
 sudo apt update -y && sudo apt dist-upgrade -y &
 sudo apt install -y gpsd gpsd-clients python-gps python-serial python3-serial pps-tools ntp ntpstat -y &
 #
-print "configuing gps services..." 
+echo "configuing gps services..." 
 #gpsd config file
 echo '
 # https://github.com/jakka351/vac_laser_test
@@ -269,7 +272,7 @@ ExecStop=/bin/sh -c "[ \"$USBAUTO\" = true ] && /usr/sbin/gpsdctl remove /dev/%I
 
 ' | sudo tee /lib/systemd/system/gpsdctl@.service > /dev/null
 #
-print "configuring pulse per second signal"
+echo "configuring pulse per second signal"
 #
 ###pps setup
 echo '
@@ -287,7 +290,7 @@ server 127.127.28.0 minpoll 4 maxpoll 4 prefer
 fudge 127.127.28.0 refid NMEA stratum 3 time 1 0.000
 ' | sudo tee -a /etc/ntp.conf > /dev/null
 #
-print "updating system time sync"
+echo "updating system time sync"
 echo '
 # https://github.com/jakka351/vac_laser_test
 # Dri-Sump Containment Testing 
@@ -300,25 +303,25 @@ NTP=127.127.28.0
 #
 #gpsd services
 #
-print "starting gpsd service & socket..."
+echo "starting gpsd service & socket..."
 sudo killall gpsd
-print "sudo kill all gpsd"
+echo "sudo kill all gpsd"
 sudo systemctl enable gpsd.socket
 sudo systemctl start gpsd.socket
-print "systemctl enable gpsd.socket"
-print "systemctl start gpsd.socket"
+echo "systemctl enable gpsd.socket"
+echo "systemctl start gpsd.socket"
 sudo systemctl enable gpsd.service
 sudo systemctl start gpsd.service
-print "systemctl enable gpsd.service"
-print "systemctl start gpsd.service"
+echo "systemctl enable gpsd.service"
+echo "systemctl start gpsd.service"
 sudo systemctl enable gpsdctl@.service
 sudo systemctl start  gpsdctl@.service 
-print "systemctl enable gpsdctl@.service"
-print "systemctl start  gpsdctl@.service "
+echo "systemctl enable gpsdctl@.service"
+echo "systemctl start  gpsdctl@.service "
 sudo adduser gpsd pi dialout
 sudo gpsd -F /var/run/gpsd.sock 
 #
-print "creating gpsd directory..."
+echo "creating gpsd directory..."
 #
 ###gps program
 #git clone ***gpslogger*** /home/pi/gpsd
@@ -327,7 +330,7 @@ sudo mkdir /home/pi/gpsd/logs
 cd /home/pi/gpsd
 #
 #
-print "creating pps.py script..."
+echo "creating pps.py script..."
 #python pps time script
 echo '                                                                   
 # https://github.com/jakka351/vac_laser_test
@@ -341,23 +344,28 @@ import sys
 import time
 from gps import *
 
-print 'Dri-Sump Containment Testing....locating GPS position.....'
+echo 'Dri-Sump Containment Testing....locating GPS position.....'
 
 try:
         gpsd = gps(mode=WATCH_ENABLE)
 except:
-        print 'No GPS connection present. TIME NOT SET.'
+       
+       echo 'No GPS connection present. TIME NOT SET.'
         sys.exit()
 
 while True:
         gpsd.next()
         if gpsd.utc != None and gpsd.utc != '':
                 gpstime = gpsd.utc[0:4] + gpsd.utc[5:7] + gpsd.utc[8:10] + ' ' + gpsd.utc[11:19]
-                print 'Dri-Sump Containment Testing....setting system time to gps time...'
+               
+               echo 'Dri-Sump Containment Testing....setting system time to gps time...'
                 os.system('sudo date -u --set="%s"' % gpstime)
-                print 'Dri-Sump Containment Testing....system time set'
-                print ''                
-                print 'Thanks from LOB'                
+               
+               echo 'Dri-Sump Containment Testing....system time set'
+               
+               echo ''                
+               
+               echo 'Thanks from LOB'                
                 sys.exit()
         time.sleep(1)
 
@@ -366,15 +374,16 @@ while True:
 #
 #
 #make executable
-print "making executable, setting to start on boot..."
+echo "making executable, setting to start on boot..."
 sudo chmod +x /home/pi/gpsd/pps.py
 #set system time
 sudo python /home/pi/gpsd/pps.py
-print "..."
+echo "..."
 #set to start on boot
 echo 'sudo python /home/pi/gpsd/pps.py &' | sudo tee -a /etc/rc.local > /dev/null
 #show date
-sudo date && print "system time"
+sudo date &&
+echo "system time"
 #sudo reboot
 
 #python gpio count
@@ -433,7 +442,8 @@ try:
     temperature = str(read_temp())
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     record = timestamp + ",T," + temperature
-    print(record)
+   
+   echo(record)
     logToFile("temperature.csv", record)
  
 except KeyboardInterrupt:
@@ -452,7 +462,7 @@ GPIO.cleanup()
 #switch newtworking to systemd
 #
 #
-print "creating hidden wifi AP..."
+echo "creating hidden wifi AP..."
 #sudo -Es   # root user
 #sudo apt --autoremove -y purge ifupdown dhcpcd5 isc-dhcp-client isc-dhcp-common rsyslog 
 #sudo apt-mark hold -y ifupdown dhcpcd5 isc-dhcp-client isc-dhcp-common rsyslog raspberrypi-net-mods openresolv
@@ -467,7 +477,7 @@ print "creating hidden wifi AP..."
 #exit 
 
 #sudo -Es   # if not already done
-print "editing wpa_supplicant..."
+echo "editing wpa_supplicant..."
 echo '
 country=AU
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
@@ -483,10 +493,10 @@ network={
     #proto=RSN WPA
     #psk="00000000"
 }
-' | sudo tee /etc/wpa_supplicant/wpa_supplicant-wlan0.conf > /dev/null
+' | sudo tee /etc/wpa_supplicant/wpa_supplicant-wlan0.conf.test > /dev/null
 #
 #
-print "enabling wpa supplicant service..."
+echo "enabling wpa supplicant service..."
 #sudo systemctl disable wpa_supplicant.service
 #sudo systemctl enable wpa_supplicant@wlan0.service
 #sudo rfkill unblock wlan &
@@ -498,14 +508,14 @@ Name=wlan0
 Address=192.168.4.1/24
 MulticastDNS=yes
 DHCPServer=yes
-' | sudo tee /etc/systemd/network/08-wlan0.network > /dev/null 	
+' | sudo tee /etc/systemd/network/08-wlan0.network.test > /dev/null 	
 
 #sudo reboot
 
-print "completed."
-print "rebooting"
+echo "completed."
+ echo "rebooting"
 #sudo reboot
-exit
+#exit
 
 #Array of dependencies any new dependencies can be added here
 #dependencies=(
