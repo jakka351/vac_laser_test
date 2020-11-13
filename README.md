@@ -6,7 +6,7 @@ balenaOS bleno container trial.
 
 # Control your devices from a web browser using Bluetooth
 
-![Banner](img/balena-web-bluetooth-banner.png)
+![Banner](balena-web-bluetooth-banner.png)
 This project uses the Web Bluetooth API and balena to control Bluetooth Low Energy (BLE) devices remotely from a browser.
 
 ## Hardware Required
