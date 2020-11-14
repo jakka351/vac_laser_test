@@ -48,10 +48,9 @@ status: not working, dbus-org.bluez error, looks good if can get running, unsure
 
 ## balena.io ble docker container application on balenaOS
 
+https://github.com/jakka351/vac_laser_test/tree/balena-ble
+
 outline:
-
-![alt text](https://raw.githubusercontent.com/jakka351/vac_laser_test/bluetooth/bal.png?raw=true) 
-
 
 This project uses the Web Bluetooth API and balena to control Bluetooth Low Energy (BLE) devices remotely from a browser.
 
