@@ -4,19 +4,31 @@
 
 # Bluetooth Control Options as of 13/11/20
 **bluetooth serial port on raspbian lite**
+
 outline:
-    >pair bluetooth > serial port > issue command to run script > pin driven high > relay activate 
+
+>pair bluetooth > serial port > issue command to run script > pin driven high > relay activate 
+
 status: working, possible compatibility issues with apple iOS and ionic framework
 
+
 **nodejs "bleno" gatt-server on raspbian lite**
+
 https://github.com/jakka351/boxee gpio control over ble example
+
 outline:
+
 >nodejs library for creatng bluetooth low energy peripherals
+
 status: Bleno is an actively maintained & functioning javascript library for creating BLE peripherals, probably the best all round option for function and compatibility. Working.
 
+
 **python ble gatt-server on raspbian lite**
+
 https://github.com/jakka351/boxee gpio control over ble example
+
 outline:
+
 >Creates a Bluetooth LE advertisement and publishes one service,which sets GPIO 17 and 18 to HIGH and LOW on a Raspberry PI, by writing a 2 byte value array:
 
     0x00 0x00 => PIN 17 and 18 is LOW
@@ -24,12 +36,19 @@ outline:
     0xFF 0xFF => PIN 17 and 18 are HIGH
 
 >Boxee is a Bluetooth Low Energy automation protoype for the Raspberyy PI. It relies on Dbus and Bluez to expose GPIO control over the BLE, so that one can >control GPIOs over the phone. The testing application on IOS is LightBlue
+
 status: not working, dbus-org.bluez error, looks good if can get running, unsure of compatibility with ionic
 
+
 **balena.io ble docker container application on balenaOS**
+
 outline:
+
 >embedded linux device operating system running single container ble application, web interface for management of application & devices, is a paid service and ownership of app, production level OS with better security than RPI Raspbian.
+
 status: working, requires $$$ fee for service & modification of code, unsure of compatibility with ionic
+
+
 
 
    https://learn.adafruit.com/introduction-to-bluetooth-low-energy/gatt ble intro
