@@ -44,11 +44,12 @@ status: not working, dbus-org.bluez error, looks good if can get running, unsure
 
 outline:
 
+![Banner](balena-web-bluetooth-banner.png)
+This project uses the Web Bluetooth API and balena to control Bluetooth Low Energy (BLE) devices remotely from a browser.
+
 >embedded linux device operating system running single container ble application, web interface for management of application & devices, is a paid service and ownership of app, production level OS with better security than RPI Raspbian.
 
 status: working, requires $$$ fee for service & modification of code, unsure of compatibility with ionic
-
-
 
 
    https://learn.adafruit.com/introduction-to-bluetooth-low-energy/gatt ble intro
