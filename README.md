@@ -44,7 +44,7 @@ status: not working, dbus-org.bluez error, looks good if can get running, unsure
 
 outline:
 
-![alt text](https://raw.githubusercontent.com/jakka351/vac_laser_test/bluetooth/bal.png)
+![alt text](https://raw.githubusercontent.com/jakka351/vac_laser_test/bluetooth/bal.png?raw=true)balena 
 
 This project uses the Web Bluetooth API and balena to control Bluetooth Low Energy (BLE) devices remotely from a browser.
 
