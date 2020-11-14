@@ -43,11 +43,16 @@ status: not working, dbus-org.bluez error, looks good if can get running, unsure
 ## balena.io ble docker container application on balenaOS
 
 outline:
-
-![Banner](https://raw.githubusercontent.com/jakka351/vac_laser_test/balena-ble/balena-web-bluetooth-banner.png?token=ANTL336YY5RTMKAIY4RQFPS7V5YTS)
+![alt text]((https://raw.githubusercontent.com/jakka351/vac_laser_test/bluetooth/bal.png)
 This project uses the Web Bluetooth API and balena to control Bluetooth Low Energy (BLE) devices remotely from a browser.
 
->embedded linux device operating system running single container ble application, web interface for management of application & devices, is a paid service and ownership of app, production level OS with better security than RPI Raspbian.
+>embedded linux device operating system running single container ble application, 
+
+>web interface for management of application & devices, 
+
+>is a paid service and ownership of app, 
+
+>production level OS with better security than RPI Raspbian.
 
 status: working, requires $$$ fee for service & modification of code, unsure of compatibility with ionic
 
