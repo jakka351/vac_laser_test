@@ -44,7 +44,7 @@ status: not working, dbus-org.bluez error, looks good if can get running, unsure
 
 outline:
 
-![Banner](https://github.com/jakka351/vac_laser_test/blob/master/balena-web-bluetooth-banner.png?raw=true)
+![Banner](https://raw.githubusercontent.com/jakka351/vac_laser_test/balena-ble/balena-web-bluetooth-banner.png?token=ANTL336YY5RTMKAIY4RQFPS7V5YTS)
 This project uses the Web Bluetooth API and balena to control Bluetooth Low Energy (BLE) devices remotely from a browser.
 
 >embedded linux device operating system running single container ble application, web interface for management of application & devices, is a paid service and ownership of app, production level OS with better security than RPI Raspbian.
@@ -69,6 +69,18 @@ status: working, requires $$$ fee for service & modification of code, unsure of 
    
 ![alt text](https://github.com/jakka351/vac_laser_test/blob/bluetooth/images/20201105_093431.jpg?raw=true)Test rig
 
+
+# GPS Logging
+
+75% complete
+
+# Pulse Per Second Time Server
+
+finished
+
+# Test Logging
+
+20% complete
 jack contact details +61434645485 bjakkaleighton@gmail.com 
 
 **Dri-Sump Containment Tightness Testing Brainstorm**
