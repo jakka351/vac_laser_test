@@ -1,20 +1,8 @@
 #                                          vac_laser_test
 
-## BLE comms
+### BLE comms | GPS Logger | PPS Time Server | Test Logger
 
-50% complete
-
-## GPS Logging
-
-75% complete
-
-## Pulse Per Second Time Server
-
-100% complete
-
-## Test Logging
-
-20% complete
+50% complete | 75% complete | 100% complete | 20% complete
 
 
 ![alt text](https://github.com/jakka351/vac_laser_test/blob/master/_updatebluetoothrasp.png?raw=true)Digital Prototype
