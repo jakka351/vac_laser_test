@@ -1,18 +1,18 @@
 #                                          vac_laser_test
 
-# BLE comms
+## BLE comms
 
 50% complete
 
-# GPS Logging
+## GPS Logging
 
 75% complete
 
-# Pulse Per Second Time Server
+## Pulse Per Second Time Server
 
 100% complete
 
-# Test Logging
+## Test Logging
 
 20% complete
 
