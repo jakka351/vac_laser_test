@@ -1,4 +1,21 @@
-# vac_laser_test
+#                                          vac_laser_test
+
+# BLE comms
+
+50% complete
+
+# GPS Logging
+
+75% complete
+
+# Pulse Per Second Time Server
+
+100% complete
+
+# Test Logging
+
+20% complete
+
 
 ![alt text](https://github.com/jakka351/vac_laser_test/blob/master/_updatebluetoothrasp.png?raw=true)Digital Prototype
 
@@ -22,6 +39,7 @@ outline:
 
 status: Bleno is an actively maintained & functioning javascript library for creating BLE peripherals, probably the best all round option for function and compatibility. Working.
 
+![alt text](https://github.com/jakka351/vac_laser_test/blob/bluetooth/images/20201105_093431.jpg?raw=true)Test rig
 
 ## python ble gatt-server on raspbian lite
 
@@ -44,7 +62,7 @@ status: not working, dbus-org.bluez error, looks good if can get running, unsure
 
 outline:
 
- ![alt text](https://raw.githubusercontent.com/jakka351/vac_laser_test/bluetooth/bal.png?raw=true) 
+![alt text](https://raw.githubusercontent.com/jakka351/vac_laser_test/bluetooth/bal.png?raw=true) 
 
 
 This project uses the Web Bluetooth API and balena to control Bluetooth Low Energy (BLE) devices remotely from a browser.
@@ -74,21 +92,8 @@ status: working, requires $$$ fee for service & modification of code, unsure of 
    
    https://github.com/abandonware/node-eddystone-beacon-scanner
    
-   
-![alt text](https://github.com/jakka351/vac_laser_test/blob/bluetooth/images/20201105_093431.jpg?raw=true)Test rig
 
 
-# GPS Logging
-
-75% complete
-
-# Pulse Per Second Time Server
-
-finished
-
-# Test Logging
-
-20% complete
 jack contact details +61434645485 bjakkaleighton@gmail.com 
 
 **Dri-Sump Containment Tightness Testing Brainstorm**
