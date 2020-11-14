@@ -3,7 +3,7 @@
 ![alt text](https://github.com/jakka351/vac_laser_test/blob/master/_updatebluetoothrasp.png?raw=true)Digital Prototype
 
 # Bluetooth Control Options as of 13/11/20
-**bluetooth serial port on raspbian lite**
+## bluetooth serial port on raspbian lite
 
 outline:
 
@@ -12,18 +12,18 @@ outline:
 status: working, possible compatibility issues with apple iOS and ionic framework
 
 
-**nodejs "bleno" gatt-server on raspbian lite**
+## nodejs "bleno" gatt-server on raspbian lite
 
-https://github.com/jakka351/boxee gpio control over ble example
-
+https://github.com/abandonware/bleno - bleno BLE peripheral on nodejs
+https://github.com/abandonware/noble - noble BLE central module nodejs
 outline:
 
->nodejs library for creatng bluetooth low energy peripherals
+>sudo npm install bleno
 
 status: Bleno is an actively maintained & functioning javascript library for creating BLE peripherals, probably the best all round option for function and compatibility. Working.
 
 
-**python ble gatt-server on raspbian lite**
+## python ble gatt-server on raspbian lite
 
 https://github.com/jakka351/boxee gpio control over ble example
 
@@ -40,7 +40,7 @@ outline:
 status: not working, dbus-org.bluez error, looks good if can get running, unsure of compatibility with ionic
 
 
-**balena.io ble docker container application on balenaOS**
+## balena.io ble docker container application on balenaOS
 
 outline:
 
@@ -61,6 +61,10 @@ status: working, requires $$$ fee for service & modification of code, unsure of 
    https://www.slideshare.net/yeokm1/introduction-to-bluetooth-low-energy background info
    
    https://raspberry-valley.azurewebsites.net/Securing-Raspberry-Pi/
+   
+   https://github.com/abandonware/node-bluetooth-hci-socket/tree/master/examples
+   
+   https://github.com/abandonware/node-eddystone-beacon-scanner
    
    
 ![alt text](https://github.com/jakka351/vac_laser_test/blob/bluetooth/images/20201105_093431.jpg?raw=true)Test rig
