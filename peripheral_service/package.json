@@ -1,0 +1,30 @@
+{
+  "name": "vac_laser_test",
+  "version": "1.0.0",
+  "description": "Dri-Sump Control Device",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+"
+  },
+  "author": "<bjakkaleighton@gmail.com>",
+  "license": "",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "https://github.com/jakka351/vac_laser_test/",
+  "dependencies": {
+    "bleno": "^0.2.1",
+    "blerg": "^0.0.3",
+    "bluetooth": "^3.0.0",
+    "bluetooth-hci-socket": "^0.3.4",
+    "onoff": "^1.2.0",
+    "utils": "^0.3.1"
+  },
+  "keywords": [
+    "ble"
+  ]
+}
