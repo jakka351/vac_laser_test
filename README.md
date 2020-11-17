@@ -2,14 +2,24 @@
 
 ### BLE Service | GPS Logger | PPS Time Server | Test Logger
 
- 50% complete  |  75% complete  |  100% complete  |  20% complete
+ 75% complete  |  75% complete  |  100% complete  |  20% complete
 
 
 ![alt text](https://github.com/jakka351/vac_laser_test/blob/master/_updatebluetoothrasp.png?raw=true)Digital Prototype
 
 # Bluetooth Low Energy Peripheral Service 15/11/20
+## using nodeJS and the "bleno" library - working script 18/11/2o
 
-## using nodeJS and the "bleno" library - testing script
+outline:
+ 
+>Working! GPIO pins controlled via ble connection from phone app.
+
+>need to sort set of parameters for phone app developer
+
+status: Testing 18/11/20
+
+
+## using nodeJS and the "bleno" library - testing script 15/11
 
 outline:
 
@@ -18,7 +28,25 @@ outline:
 status: Testing 15/11/20
 
 
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
 
+#
+#
+#
+#
+#
+#
+#
+#
 
 # Bluetooth Control Options as of 13/11/20
 ## bluetooth serial port on raspbian lite
