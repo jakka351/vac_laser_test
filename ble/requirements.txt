@@ -1,0 +1,7 @@
+
+Parameters for the phone app
+
+--must act as a ble client device
+--be able to read the ble peripheral advertisement, characteristic, descriptor and service as per bluetooth low energy specification.
+--to be able to write a 4 digit plain text message to the ble peripheral's service after connection to start and finish a test
+--be able to record read information to a log
