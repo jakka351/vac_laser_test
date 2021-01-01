@@ -1,38 +1,39 @@
 #!/bin/bash
-echo '										'
-echo '  01001100 01100101 01101001 01100111 01101000 01110100 01101111 01101110	'
-echo '  _          _       _     _              _____ _______      _		'
-echo ' | |        (_)     | |   | |            |  _  ( ) ___ \    (_)		'
-echo ' | |     ___ _  __ _| |__ | |_ ___  _ __ | | | |/| |_/ /_ __ _  ___ _ __	'
-echo ' | |    / _ \ |/ _` | '_ \| __/ _ \| '_ \| | | | | ___ \ '__| |/ _ \ '_ \ '
+echo '                                                                          '
+echo '  01001100 01100101 01101001 01100111 01101000 01110100 01101111 01101110 '
+echo '  _          _       _     _              _____ _______      _            '
+echo ' | |        (_)     | |   | |            |  _  ( ) ___ \    (_)           '
+echo ' | |     ___ _  __ _| |__ | |_ ___  _ __ | | | |/| |_/ /_ __ _  ___ _ __  '
+echo ' | |    / _ \ |/ _  |  _ \| __/ _ \|  _ \| | | | | __  \  __| |/ _ \  _ \ '
 echo ' | |___|  __/ | (_| | | | | || (_) | | | \ \_/ / | |_/ / |  | |  __/ | | |'
 echo ' \_____/\___|_|\__, |_| |_|\__\___/|_| |_|\___/  \____/|_|  |_|\___|_| |_|'
-echo '                __/ |         						'
-echo '               |___/							'
-echo '  01001100 01100101 01101001 01100111 01101000 01110100 01101111 01101110	'
-echo '										'
+echo '                __/ |                                                     '
+echo '               |___/                                                      '
+echo '  01001100 01100101 01101001 01100111 01101000 01110100 01101111 01101110 '
+echo '                                                                          '
 echo '  Dri-Sump Containment Testing...                       ...Control Device '
-echo '                                          \  //\ /  `			'
-echo '                                           \//~~\\__,			'
-echo '                                          __  ___ __			'
-echo '                                 |    /\ /__`|__ |__)			'	
-echo '                                 |___/~~\.__/|___|  \			'
-echo '                                      ______ _____			'
-echo '                                        ||__ /__`|			'
-echo '                                        ||___.__/|			'
-echo '										'
-echo '										'
-echo '  GPS + PPS Daemon Installer...						'
-echo '                                                ....Debian-GNU/Linux 2020	'
-echo '										'
-echo '  01001100 01100101 01101001 01100111 01101000 01110100 01101111 01101110	'
-echo '  Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent	'
-echo '  permitted by applicable law.						'
+echo '                                          \  //\ /  `                     '
+echo '                                           \//~~\\__,                     '
+echo '                                          __  ___ __                      '
+echo '                                 |    /\ /__`|__ |__)                     '
+echo '                                 |___/~~\.__/|___|  \                     '
+echo '                                      ______ _____                        '
+echo '                                        ||__ /__`|                        '
+echo '                                        ||___.__/|                        '
+echo '                                                                          '
+echo '                                                                          '
+echo '  GPS + PPS Daemon Installer...                                           '
+echo '                                                ....Debian-GNU/Linux 2020 '
+echo '                                                                          '
+echo '  01001100 01100101 01101001 01100111 01101000 01110100 01101111 01101110 '
+echo '  Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent       '
+echo '  permitted by applicable law.                                            '
 echo ''
 sleep 5
+sleep 0.5
 sudo su - <<EOF
 sudo apt update -y && sudo apt dist-upgrade -y
-sleep 1
+sleep 0.5
 sudo apt install -y gpsd gpsd-clients python-gps python-serial python3-serial pps-tools ntp ntpstat 
 sleep 0.1
 echo "configuing gps services..." 
@@ -224,14 +225,44 @@ echo "making executable, setting to start on boot..."
 sudo chmod +x /home/pi/gpsd/pps.py
 sleep 2
 #set system time
-#sudo python /home/pi/gpsd/pps.py
+sudo python /home/pi/gpsd/pps.py
 echo "..."
 echo ". . ."
-#set to start on boot
-##echo 'sudo python /home/pi/gpsd/pps.py &' | sudo tee -a /etc/rc.local > /dev/null
+echo 'set to start on boot'
+#echo 'sudo python /home/pi/gpsd/pps.py &' | sudo tee -a /etc/rc.local > /dev/null
 #show date
 sudo date &&
 echo "system time"
 sleep 1
-
+echo '                                                                          '
+echo '  01001100 01100101 01101001 01100111 01101000 01110100 01101111 01101110 '
+echo '  _          _       _     _              _____ _______      _            '
+echo ' | |        (_)     | |   | |            |  _  ( ) ___ \    (_)           '
+echo ' | |     ___ _  __ _| |__ | |_ ___  _ __ | | | |/| |_/ /_ __ _  ___ _ __  '
+echo ' | |    / _ \ |/ _  |  _ \| __/ _ \|  _ \| | | | | __  \  __| |/ _ \  _ \ '
+echo ' | |___|  __/ | (_| | | | | || (_) | | | \ \_/ / | |_/ / |  | |  __/ | | |'
+echo ' \_____/\___|_|\__, |_| |_|\__\___/|_| |_|\___/  \____/|_|  |_|\___|_| |_|'
+echo '                __/ |                                                     '
+echo '               |___/                                                      '
+echo '  01001100 01100101 01101001 01100111 01101000 01110100 01101111 01101110 '
+echo '                                                                          '
+echo '  Dri-Sump Containment Testing...                       ...Control Device '
+echo '                                          \  //\ /  `                     '
+echo '                                           \//~~\\__,                     '
+echo '                                          __  ___ __                      '
+echo '                                 |    /\ /__`|__ |__)                     '
+echo '                                 |___/~~\.__/|___|  \                     '
+echo '                                      ______ _____                        '
+echo '                                        ||__ /__`|                        '
+echo '                                        ||___.__/|                        '
+echo '                                                                          '
+echo '                                                                          '
+echo '  GPS + PPS Daemon Installer...                                           '
+echo '                                                ....Debian-GNU/Linux 2020 '
+echo '                                                                          '
+echo '  01001100 01100101 01101001 01100111 01101000 01110100 01101111 01101110 '
+echo '  Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent       '
+echo '  permitted by applicable law.                                            '
+echo ''
+sleep 10
 EOF
